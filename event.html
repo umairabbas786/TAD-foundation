@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+   
+<!-- Mirrored from templates.iqonic.design/epy-html/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Dec 2022 14:17:57 GMT -->
+<head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>The Anthony Duclair Foundation</title>
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="images/favicon.ico" />
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- REVOLUTION STYLE SHEETS -->
+      <link rel="stylesheet" href="revslider/css/rs6.css">
+      <!-- Typography CSS -->
+      <link rel="stylesheet" href="css/typography.css">
+      <!-- Style CSS -->
+      <link rel='stylesheet' href='css/epy-style.css' />
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+      <link rel="stylesheet" href="css/animate.css">
+
+      <style>
+.section-padding {
+  padding-top: 30px;
+}
+
+.gallery-section {
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 5px 4px 4px 0;
+  display: inline-block;
+  color: #003;
+  background: #eee;
+  border: 1px solid #f44336;
+  transition: all 0.4s;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.btn:hover,
+.btn-active {
+  background: #f44336;
+  color: #fff;
+  -webkit-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  transform: translateY(3px);
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  max-width: 1400px;
+  flex-wrap: wrap;
+  margin: 25px auto;
+  /* gap: 14px; */
+}
+.gallery a {
+  display: flex;
+}
+.gallery img {
+  width: 320px;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 10px 10px;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+.sets .hide,
+.sets .pophide {
+  width: 0%;
+  opacity: 0;
+}
+
+.closeBtn {
+  position: absolute;
+  font-size: 22px;
+  font-weight: 500;
+  right: 25px;
+  top: 25px;
+  color: white;
+  transition: 0.5s linear;
+  padding: 8px 40px;
+  border-radius: 25px;
+  background: transparent;
+  outline-offset: -6px;
+  outline: 2px solid #fff;
+}
+.closeBtn:hover {
+  cursor: pointer;
+  background: white;
+  color: black;
+  outline: 2px solid #000;
+}
+
+.openDiv {
+  width: 100%;
+  height: 100vh;
+  background: #000000e7;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  z-index: 9999;
+}
+.imgPreview {
+  width: 70%;
+  object-fit: scale-down;
+  max-height: 40vw;
+  height: auto;
+}
+.prevButton,
+.nextButton {
+  transition: 1s linear;
+  padding: 10px 35px;
+  font-size: 18px;
+  border: none;
+  color: white;
+  background: #0005;
+  border-radius: 10px;
+  border: 1px solid white;
+  margin: 10px;
+}
+.prevButton:hover,
+.nextButton:hover {
+  background: #fff;
+  color: black;
+}
+
+/* resposive CSS Code */
+@media (max-width: 991px) {
+  .section-padding {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .title {
+    font-size: 36px;
+  }
+  .gallery img {
+    margin: 8px 8px;
+    width: 300px;
+  }
+  .closeBtn {
+    padding: 6px 25px;
+  }
+}
+
+@media (max-width: 540px) {
+  .section-padding {
+    padding-top: 30px;
+  }
+
+  .gallery img {
+    margin: 8px 6px;
+    width: 100%;
+  }
+
+  .closeBtn {
+    font-size: 18px;
+    border-radius: 15px;
+  }
+
+  .imgPreview {
+    width: 90%;
+    max-height: 50vh;
+    height: auto;
+  }
+}
+
+      </style>
+
+   </head>
+   <body class="position-relative">
+      <!-- loading -->
+      <!-- <div id="loading">
+         <div id="loading-center">
+            <div class="load-img">
+               <img src="images/loader.gif" alt="loader">
+            </div>
+         </div>
+      </div> -->
+      <!-- loading End -->
+      <!-- Header -->
+      <header id="main-header" class="header-main">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-sm-12">
+                  <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="index.html">
+                    
+                      <img src="images/logo.png" alt="">
+
+                     </a>
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="menu-btn d-inline-block" id="menu-btn">
+                     <span class="line"></span>
+                     <span class="line"></span>
+                     <span class="line"></span>
+                     </span>
+                     <span class="ion-navicon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto w-100 justify-content-end text-uppercase">
+                          <li class="nav-item dropdown">
+                            <a class="nav-link " href="index.html" 
+                           >Home</a>
+                         </li>
+                           <li class="nav-item dropdown">
+                            <a class="nav-link " href="mission.html" 
+                            >Our Mission</a>
+                           </li>
+                           <li class="nav-item ">
+                              <a class="nav-link" href="anthony.html">Anthony</a>
+                             
+                           </li>
+                           <li class="nav-item ">
+                            <a class="nav-link" href="sponsors.html">Our Sponsors</a>
+                           
+                         </li>
+                         <li class="nav-item ">
+                            <a class="nav-link active" href="event.html">Events</a>
+                          </li>
+                         <li class="nav-item ">
+                            <a class="nav-link " href="news.html">News</a>
+                         
+                       </li>
+                          
+                          
+                           
+                          
+                        </ul>
+                     </div>
+                    
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- Header End -->
+    <!-- Banner Start --> 
+    <div class="iq-breadcrumb" style="background: url(images/anthony-bg.webp); background-repeat: no-repeat; background-size: cover;">
+    <div class="container">
+      <div class="row">
+       <div class="col-lg-12 col-md-12 position-relative">
+        <img class="shape10" alt="#" src="images/shape-4.png">
+        <h2 class="text-white position-relative">Cocktail Lunch</h2>
+       </div>
+       
+       </div>
+       </div> 
+     </div>
+    <!-- Banner End -->
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-lg-12">      
+                <div class="iq-title-box wow pulse">
+                    <h2 class="iq-title text-center mt-2" style="color: #17363a">Cocktail Lunch</h2>
+                </div>
+                <div class="section-padding gallery-section" id="gallery">
+                    <div class="gallery sets">
+                        <a><img src="images/gallery/Anthony Duclair Foundation-1-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-2-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-3-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-4-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-5-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-6-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-7-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-8-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-9-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-10-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-11-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-12-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-13-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-14-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-15-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-16-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-17-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-18-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-19-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-20-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-21-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-22-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-23-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-24-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-25-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-26-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-27-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-28-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-29-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-30-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-31-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-32-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-33-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-34-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-35-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-36-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-37-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-38-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-39-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-40-min.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-41.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-42.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-43.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-44.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-45.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-46.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-47.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-48.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-49.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-50.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-51.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-52.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-53.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-54.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-55.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-56.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-57.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-58.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-59.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-60.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-61.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-62.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-63.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-64.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-65.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-66.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-67.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-68.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-69.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-70.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-71.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-72.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-73.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-74.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-75.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-76.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-77.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-78.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-79.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-80.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-81.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-82.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-83.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-84.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-85.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-86.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-87.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-88.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-89.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-90.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-91.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-92.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-93.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-94.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-95.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-96.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-97.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-98.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-99.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-100.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-101.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-102.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-103.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-104.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-105.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-106.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-107.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-108.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-109.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-110.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-111.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-112.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-113.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-114.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-115.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-116.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-117.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-118.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-119.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-120.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-121.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-122.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-123.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-124.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-125.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-126.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-127.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-128.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-129.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-130.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-131.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-132.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-133.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-134.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-135.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-136.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-137.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-138.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-139.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-140.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-141.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-142.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-143.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-144.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-145.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-146.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-147.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-148.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-149.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-150.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-151.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-152.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-153.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-154.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-155.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-156.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-157.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-158.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-159.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-160.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-161.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-162.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-163.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-164.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-165.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-166.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-167.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-168.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-169.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-170.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-171.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-172.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-173.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-174.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-175.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-176.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-177.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-178.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-179.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-180.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-181.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-182.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-183.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-184.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-185.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-186.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-187.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-188.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-189.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-190.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-191.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-192.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-193.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-194.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-195.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-196.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-197.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-198.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-199.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-200.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-201.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-202.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-203.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-204.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-205.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-206.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-207.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-208.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-209.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-210.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-211.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-212.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-213.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-214.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-215.jpg" loading="lazy" /></a>
+                        <a><img src="images/gallery/Anthony Duclair Foundation-216.jpg" loading="lazy" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/><br/>
+
+    <hr>
+<a href="sponsors.html">
+ <h2 class="text-center my-3 my-xl-5">Our Sponsors</h2></a>   
+    <div class="blue-bg p-5 overview-block-ptb">
+     <div class="container">
+   
+       <div class="row">
+        <div class="col-sm-12">
+         <div class="owl-carousel" data-autoplay="1" data-loop="true" data-nav="true" data-dots="true" data-items="4" data-items-laptop="4" data-items-tab="3" data-items-mobile="1" data-items-mobile-sm="1" data-margin="30">
+          <div class="item spons">
+           <div class="clients-img text-center">
+            <img alt="#" src="images/sponsors/sponser-1.png"> 
+           </div>
+          </div>
+          <div class="item spons">
+           <div class="clients-img text-center">
+            <img alt="#" src="images/sponsors/Sponsor-2.png"> 
+           </div>
+          </div>
+          <div class="item spons">
+           <div class="clients-img text-center">
+            <img alt="#" src="images/sponsors/sponsor-3.png"> 
+           </div>
+          </div>
+          <div class="item spons">
+           <div class="clients-img text-center">
+            <img alt="#" src="images/sponsors/Sponsor-4.png"> 
+           </div>
+          </div>
+         
+         </div>
+        </div> 
+        </div>
+      </div>
+      <div class="text-center pt-5">
+        <a href="sponsors.html" class=" mt-5 text-white">For more information about becoming a sponsor, please visit our Sponsors page.</a>
+    
+       </div>
+    </div>
+     <!-- Clients End -->
+     <!-- Footer Start -->
+     <footer class="main-bg">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-4 col-sm-12 my-4 sm-text-center">
+             <ul class="list-inline mb-2">
+              <li class="list-inline-item text-white">duclairfoundation@gmail.com</li>
+             </ul>
+
+             <ul class="list-inline mb-0 mt-2 iq-social d-inline-block position-relative">
+              <li class="list-inline-item mr-2 ml-2 position-relative"><a class="text-white" href="#"><i class="ion-social-facebook"></i></a></li>
+              <li class="list-inline-item mr-2 ml-2 position-relative"><a class="text-white" href="#"><i class="ion-social-twitter"></i></a></li>
+             </ul>
+               
+            </div>
+            <div class="col-lg-4 col-sm-12 my-4 text-center">
+             <h6 style="color: white;">THE ANTHONY<br>DUCLAIR FOUNDATION</h6>
+            </div>
+            <div class="col-lg-4 col-sm-12 my-4 text-center">
+              <p class="text-white mb-0">Copyrights 2022 ©The Anthony Duclair Foundation</p>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- Footer End -->
+   </div>
+   <!-- Main Content End -->
+  
+   <!-- === back-to-top === -->
+   <div id="back-to-top">
+      <a class="top" id="top" href="#top"> <i class="ion-ios-arrow-up"></i> </a>
+   </div>
+   <!-- === back-to-top End === -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="js/jquery-3.4.1.js"></script>
+   <!-- jQuery  for scroll me js -->
+   <script src='js/jquery-min.js'></script>
+   <!-- popper  -->
+   <script src="js/popper.min.js"></script>
+   <!--  bootstrap -->
+   <script src="js/bootstrap.min.js"></script>
+   <!-- Appear JavaScript -->
+   <script src="js/appear.js"></script>
+   <!-- Jquery-migrate JavaScript -->
+   <script src='js/jquery-migrate.min.js'></script>
+   <!-- countdownTimer JavaScript -->
+   <script src='js/jQuery.countdownTimer.min.js'></script>
+   <!-- Tox-progress JavaScript -->
+   <script src='js/tox-progress.min.js'></script>
+   <!-- Popper JavaScript -->
+   <script src='js/popper.min.js'></script>
+   <!-- Owl.carousel JavaScript -->
+   <script src='js/owl.carousel.min.js'></script>
+   <!-- Countdown JavaScript -->
+   <script src='js/countdown.js'></script>
+   <!-- Jquery.countTo JavaScript -->
+   <script src='js/jquery.countTo.js'></script>
+   <!-- Magnific-popup JavaScript -->
+   <script src='js/jquery.magnific-popup.min.js'></script>
+   <!-- Isotope.pkgd.min JavaScript -->
+   <script src='js/isotope.pkgd.min.js'></script>
+   <!-- Wow JavaScript -->
+   <script src='js/wow.min.js'></script>
+   <!--  Custom JavaScript -->
+   <script src="js/custom.js"></script>
+   <!-- REVOLUTION JS FILES -->
+   <script src="revslider/js/revolution.tools.min.js"></script>
+   <script src="revslider/js/rs6.min.js"></script>
+     <script src="swiper/swiper-bundle.min.js"></script>
+      <script>
+ var swiper = new Swiper(".mySwiper", {
+   slidesPerView: 3,
+   spaceBetween: 30,
+   centeredSlides: true,
+   roundLengths: true,
+   nextButton: '.swiper-button-next',
+   prevButton: '.swiper-button-prev',
+   loop: true,
+   breakpoints: {
+     1920: {
+       slidesPerView: 3,
+       spaceBetween: 30
+     },
+     1028: {
+       slidesPerView: 3,
+       spaceBetween: 30
+     },
+     480: {
+       slidesPerView: 1,
+       spaceBetween: 10
+     },
+     360: {
+       slidesPerView: 1,
+       spaceBetween: 10
+     }
+   },
+   navigation: {
+     nextEl: ".swiper-button-next",
+     prevEl: ".swiper-button-prev",
+   },
+
+ });
+</script>
+<script src="js/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>
+<script>
+    let imgs = document.querySelectorAll("img");
+      let count;
+      imgs.forEach((img, index) => {
+        img.addEventListener("click", function (e) {
+          if (e.target == this) {
+            count = index;
+            let openDiv = document.createElement("div");
+            let imgPreview = document.createElement("img");
+            let butonsSection = document.createElement("div");
+            butonsSection.classList.add("butonsSection");
+            let closeBtn = document.createElement("button");
+            // let nextBtn = document.createElement("button");
+            // let prevButton = document.createElement("button");
+            // prevButton.innerText = "Previous";
+            // nextBtn.innerText = "Next";
+
+            // nextBtn.classList.add("nextButton");
+            // prevButton.classList.add("prevButton");
+            // nextBtn.addEventListener("click", function () {
+            //   if (count >= imgs.length - 1) {
+            //     count = 0;
+            //   } else {
+            //     count++;
+            //   }
+
+            //   imgPreview.src = imgs[count].src;
+            // });
+
+            // prevButton.addEventListener("click", function () {
+            //   if (count === 0) {
+            //     count = imgs.length - 1;
+            //   } else {
+            //     count--;
+            //   }
+
+            //   imgPreview.src = imgs[count].src;
+            // });
+
+            closeBtn.classList.add("closeBtn");
+            closeBtn.innerText = "Close";
+            closeBtn.addEventListener("click", function () {
+              openDiv.remove();
+            });
+
+            imgPreview.classList.add("imgPreview");
+            imgPreview.src = this.src;
+
+            // butonsSection.append(prevButton, nextBtn);
+            openDiv.append(imgPreview, closeBtn);
+
+            openDiv.classList.add("openDiv");
+
+            document.querySelector("body").append(openDiv);
+          }
+        });
+      });
+</script>
+</body>
+
+<!-- Mirrored from templates.iqonic.design/epy-html/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Dec 2022 14:18:31 GMT -->
+</html>
