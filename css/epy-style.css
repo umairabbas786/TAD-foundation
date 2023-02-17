@@ -1871,13 +1871,13 @@ ul.iq-list li span:after{position: absolute;
 	max-height: 100vh!important;
 }
 
-@media(max-width:600px) {
+@media(max-width:500px) {
 	.display{
 		padding-top: 15px;
-		font-size: 22px;
+		font-size: 18px;
 	}
 	.displayp{
-		font-size: 18px;
+		font-size: 14px;
 	}
 	.displaypp{
 		font-size: 12px;
