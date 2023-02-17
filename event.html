@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en">
-   
-<!-- Mirrored from templates.iqonic.design/epy-html/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Dec 2022 14:17:57 GMT -->
-<head>
+    <head>
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,8 +9,6 @@
       <link rel="shortcut icon" href="images/favicon.ico" />
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="css/bootstrap.min.css">
-      <!-- REVOLUTION STYLE SHEETS -->
-      <link rel="stylesheet" href="revslider/css/rs6.css">
       <!-- Typography CSS -->
       <link rel="stylesheet" href="css/typography.css">
       <!-- Style CSS -->
@@ -666,33 +662,6 @@ new WOW().init();
             let butonsSection = document.createElement("div");
             butonsSection.classList.add("butonsSection");
             let closeBtn = document.createElement("button");
-            // let nextBtn = document.createElement("button");
-            // let prevButton = document.createElement("button");
-            // prevButton.innerText = "Previous";
-            // nextBtn.innerText = "Next";
-
-            // nextBtn.classList.add("nextButton");
-            // prevButton.classList.add("prevButton");
-            // nextBtn.addEventListener("click", function () {
-            //   if (count >= imgs.length - 1) {
-            //     count = 0;
-            //   } else {
-            //     count++;
-            //   }
-
-            //   imgPreview.src = imgs[count].src;
-            // });
-
-            // prevButton.addEventListener("click", function () {
-            //   if (count === 0) {
-            //     count = imgs.length - 1;
-            //   } else {
-            //     count--;
-            //   }
-
-            //   imgPreview.src = imgs[count].src;
-            // });
-
             closeBtn.classList.add("closeBtn");
             closeBtn.innerText = "Close";
             closeBtn.addEventListener("click", function () {
@@ -701,8 +670,6 @@ new WOW().init();
 
             imgPreview.classList.add("imgPreview");
             imgPreview.src = this.src;
-
-            // butonsSection.append(prevButton, nextBtn);
             openDiv.append(imgPreview, closeBtn);
 
             openDiv.classList.add("openDiv");
@@ -713,6 +680,4 @@ new WOW().init();
       });
 </script>
 </body>
-
-<!-- Mirrored from templates.iqonic.design/epy-html/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Dec 2022 14:18:31 GMT -->
 </html>
