@@ -1866,3 +1866,21 @@ ul.iq-list li span:after{position: absolute;
     font-family: "Ionicons";
     color: #e14434;
 }
+
+.main-conte{
+	max-height: 100vh!important;
+}
+
+@media(max-width:600px) {
+	.display{
+		padding-top: 15px;
+		font-size: 22px;
+	}
+	.displayp{
+		font-size: 18px;
+	}
+	.displaypp{
+		font-size: 12px;
+	}
+
+}
