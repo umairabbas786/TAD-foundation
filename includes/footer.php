@@ -1,9 +1,11 @@
 <?php 
     if(isset($_POST['mailing'])){
         $to = "umairabbass786@gmail.com";
+        $subject = "Newsletter";
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $email = $_POST['email'];
+
         $msg = "First Name = $fname\r\n" . "Last Name = $lname\r\n" . "Sender = $email\r\n";
         $headers = "From: mailing@duclairfoundation.com";
 
