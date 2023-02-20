@@ -1,22 +1,22 @@
-<?php 
-    if(isset($_POST['mailing'])){
-        $to = "umairabbass786@gmail.com";
-        $subject = "Newsletter";
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
-        $email = $_POST['email'];
+<?php
+if (isset($_POST['mailing'])) {
+    $to = "info@duclairfoundation.com";
+    $subject = "Newsletter";
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $email = $_POST['email'];
 
-        $msg = "First Name = $fname\r\n" . "Last Name = $lname\r\n" . "Sender = $email\r\n";
-        $headers = "From: mailing@duclairfoundation.com";
+    $msg = "First Name = $fname\r\n" . "Last Name = $lname\r\n" . "Sender = $email\r\n";
+    $headers = "From: mailing@duclairfoundation.com";
 
-        if (mail($to, $subject, $msg, $headers)) {
-            $success = [];
-            $success['status'] = 'success';
-        } else {
-            $error = [];
-            $error['status'] = 'error';
-        }
+    if (mail($to, $subject, $msg, $headers)) {
+        $success = [];
+        $success['status'] = 'success';
+    } else {
+        $error = [];
+        $error['status'] = 'error';
     }
+}
 
 ?>
 
@@ -62,44 +62,44 @@
     </div>
 
 </div>
-<?php if ($_SERVER['REQUEST_URI'] == "/index.php") { ?>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="text-center mt-5 mb-3">Subscribe to our Newsletter</h2>
-            <div class="row">
-                <div class="col-md-12">
-                    <form class="form mb-5 justify-content-center" method="POST" action="">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <div class="form-group mx-sm-3 mb-2">
-                                    <label for="inputPassword2" class="sr-only">First Name</label>
-                                    <input type="text" class="form-control form-control-lg" name="fname" id="inputPassword2" placeholder="First Name">
+<?php if ($_SERVER['REQUEST_URI'] == "/index.php" || $_SERVER['REQUEST_URI'] == "/") { ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center mt-5 mb-3">Subscribe to our Newsletter</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form mb-5 justify-content-center" method="POST" action="">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group mx-sm-3 mb-2">
+                                        <label for="inputPassword2" class="sr-only">First Name</label>
+                                        <input type="text" class="form-control form-control-lg" name="fname" id="inputPassword2" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group mx-sm-3 mb-2">
+                                        <label for="inputPassword2" class="sr-only">Last Name</label>
+                                        <input type="text" class="form-control form-control-lg" name="lname" id="inputPassword2" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <div class="form-group mx-sm-3 mb-2">
+                                        <label for="inputPassword2" class="sr-only">Email</label>
+                                        <input type="email" class="form-control form-control-lg" name="email" id="inputPassword2" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" name="mailing" class="btn btn-primary ml-3 mb-2">Submit</button>
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="form-group mx-sm-3 mb-2">
-                                    <label for="inputPassword2" class="sr-only">Last Name</label>
-                                    <input type="text" class="form-control form-control-lg" name="lname" id="inputPassword2" placeholder="Last Name">
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-3">
-                                <div class="form-group mx-sm-3 mb-2">
-                                    <label for="inputPassword2" class="sr-only">Email</label>
-                                    <input type="email" class="form-control form-control-lg" name="email" id="inputPassword2" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <button type="submit" name="mailing" class="btn btn-primary ml-3 mb-2">Submit</button>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<?php }?>
+<?php } ?>
 <footer class="main-bg">
     <div class="container">
         <div class="row align-items-center">
@@ -150,6 +150,7 @@
 <script src="revslider/js/revolution.tools.min.js"></script>
 <script src="revslider/js/rs6.min.js"></script>
 <script src="swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script>
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
@@ -189,36 +190,44 @@
     new WOW().init();
 </script>
 <?php if ($_SERVER['REQUEST_URI'] == "/event.php") { ?>
-<script>
-    let imgs = document.querySelectorAll("img");
-    let count;
-    imgs.forEach((img, index) => {
-        img.addEventListener("click", function(e) {
-            if (e.target == this) {
-                count = index;
-                let openDiv = document.createElement("div");
-                let imgPreview = document.createElement("img");
-                let butonsSection = document.createElement("div");
-                butonsSection.classList.add("butonsSection");
-                let closeBtn = document.createElement("button");
-                closeBtn.classList.add("closeBtn");
-                closeBtn.innerText = "Close";
-                closeBtn.addEventListener("click", function() {
-                    openDiv.remove();
-                });
+    <script>
+        let imgs = document.querySelectorAll("img");
+        let count;
+        imgs.forEach((img, index) => {
+            img.addEventListener("click", function(e) {
+                if (e.target == this) {
+                    count = index;
+                    let openDiv = document.createElement("div");
+                    let imgPreview = document.createElement("img");
+                    let butonsSection = document.createElement("div");
+                    butonsSection.classList.add("butonsSection");
+                    let closeBtn = document.createElement("button");
+                    closeBtn.classList.add("closeBtn");
+                    closeBtn.innerText = "Close";
+                    closeBtn.addEventListener("click", function() {
+                        openDiv.remove();
+                    });
 
-                imgPreview.classList.add("imgPreview");
-                imgPreview.src = this.src;
-                openDiv.append(imgPreview, closeBtn);
+                    imgPreview.classList.add("imgPreview");
+                    imgPreview.src = this.src;
+                    openDiv.append(imgPreview, closeBtn);
 
-                openDiv.classList.add("openDiv");
+                    openDiv.classList.add("openDiv");
 
-                document.querySelector("body").append(openDiv);
-            }
+                    document.querySelector("body").append(openDiv);
+                }
+            });
         });
-    });
-</script>
-<?php }?>
+    </script>
+<?php } ?>
+<?php if ($success['status'] === 'success') { ?>
+    <script>
+        Toastify({
+            text: "Newsletter Subscribed Successfully",
+            className: "success",
+        }).showToast();
+    </script>
+<?php } ?>
 </body>
 
 </html>

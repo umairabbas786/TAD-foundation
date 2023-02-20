@@ -24,6 +24,7 @@ ob_start();
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
     <?php if ($_SERVER['REQUEST_URI'] == "/event.php") { ?>
         <style>
