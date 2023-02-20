@@ -1,3 +1,23 @@
+<?php 
+    if(isset($_POST['mailing'])){
+        $to = "umairabbass786@gmail.com";
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $email = $_POST['email'];
+        $msg = "First Name = $fname\r\n" . "Last Name = $lname\r\n" . "Sender = $email\r\n";
+        $headers = "From: mailing@duclairfoundation.com";
+
+        if (mail($to, $subject, $msg, $headers)) {
+            $success = [];
+            $success['status'] = 'success';
+        } else {
+            $error = [];
+            $error['status'] = 'error';
+        }
+    }
+
+?>
+
 <hr>
 <h2 class="text-center my-3 my-xl-5">Our Partners</h2>
 <div class="blue-bg p-5 overview-block-ptb">
@@ -47,7 +67,7 @@
             <h2 class="text-center mt-5 mb-3">Subscribe to our Newsletter</h2>
             <div class="row">
                 <div class="col-md-12">
-                    <form class="form mb-5 justify-content-center">
+                    <form class="form mb-5 justify-content-center" method="POST" action="">
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <div class="form-group mx-sm-3 mb-2">
@@ -68,7 +88,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary ml-3 mb-2">Submit</button>
+                                <button type="submit" name="mailing" class="btn btn-primary ml-3 mb-2">Submit</button>
                             </div>
                         </div>
                     </form>
